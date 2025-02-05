@@ -1,0 +1,206 @@
+@font-face {
+  font-family: blackOps;
+  src: url(./assets/BlackOpsOne-Regular.ttf);
+}
+.title {
+  font-family: blackOps;
+  font-size: 2rem;
+  color: #2ba3a5;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* General Reset for Consistent Styling */
+body, html {
+  font-family: Arial, sans-serif;
+  color: #a5aee6;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+/* Global Link and Button Styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: circle;
+  margin: 0;
+  padding: 0;
+}
+
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #2ba3a5;
+}
+
+button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+  background-color: #101616;
+  color: white;
+  align-items: center;
+  margin-top: 0rem;
+  position: relative;
+}
+
+
+.nav-left {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-brand h1 a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.dropdown {
+  position: relative; /* Ensure the dropdown positions correctly relative to the button */
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.dropdown-menu {
+  display: none; /* Initially hidden */
+  position: absolute;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  top: 100%; /* Position the menu below the dropdown button */
+  right: 0; /* Position the menu to the right */
+  min-width: 150px; /* Set a minimum width for the dropdown */
+  z-index: 1000; /* Ensure dropdown is above other content */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+}
+
+ .dropdown-menu.show {
+  display: block; 
+} 
+
+/* For dropdown content styling 
+.dropdown-menu p {
+  margin: 0.5rem 0;
+} */
+
+/* Show the dropdown menu when the dropdown is active */
+.dropdown-menu.open {
+  display: block; /* Show the dropdown menu */
+}
+
+/* Ensure the dropdown links/buttons have a clear layout */
+.dropdown-menu a,
+.dropdown-menu button {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  width: 100%; /* Make links/buttons take up full width of the dropdown  */
+} 
+
+button {
+  background-color: #2ba3a5;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2ba3a5;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #111818, #0f0d0d, #091c2e);
+  padding-top: 80px;
+}
+
+h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  footer {
+    padding: 0.5rem;
+    background-color: #091c2e;
+  }
+}
